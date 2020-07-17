@@ -38,5 +38,49 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageButton
+        android:id="@+id/imageButton_heats"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="18dp"
+        android:background="#ffffff"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_myspace"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_search"
+        app:srcCompat="@drawable/browse" />
+
+    <TextView
+        android:id="@+id/text_heats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热点"
+        app:layout_constraintEnd_toStartOf="@+id/textView_mysapce"
+        app:layout_constraintStart_toEndOf="@+id/text_search"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_heats" />
+
+    <ImageButton
+        android:id="@+id/imageButton_myspace"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#ffffff"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/textView_mysapce"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/textView_mysapce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="我的"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

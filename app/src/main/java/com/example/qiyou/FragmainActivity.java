@@ -15,23 +15,37 @@ public class FragmainActivity extends AppCompatActivity {
 
     private MyspaceFragment fragment_myspace =new MyspaceFragment();
     private HomeFragment fragment_home =new HomeFragment();
+//    private HeatFragment fragment_heat =new HeatFragment();
+    int flg=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragmain);
-        //MainFragment fragment_main =new MainFragment();
-        //MyspaceFragment fragment_myspace =new MyspaceFragment();
         ImageButton IB_search =(ImageButton) findViewById(R.id.imageButton_search);
 
-//        Button b_fragment_main = (Button) findViewById(R.id.button_mainfrag);
-//        Button b_fragment_home = (Button) findViewById(R.id.button_userfrag);
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,fragment_myspace).commit();
+//      Button b_fragment_main = (Button) findViewById(R.id.button_mainfrag);
+//      Button b_fragment_home = (Button) findViewById(R.id.button_userfrag);
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,fragment_home).commit();
+//        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,fragment_heat);
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,fragment_myspace).commit();
+
         //getSupportFragmentManager().beginTransaction().hide(fragment_home).commit();
 
 
         //getSupportFragmentManager().beginTransaction().hide(fragment_myspace).commit();
         //getSupportFragmentManager().beginTransaction().show(fragment_main).commit();
+
+        IB_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(flg==0)
+                {
+                    getSupportFragmentManager().beginTransaction().hide(fragment_myspace).commit();
+                    //getSupportFragmentManager().beginTransaction().hide(fragment_heat).commit();
+
+                }
+            }
+        });
 
 
 

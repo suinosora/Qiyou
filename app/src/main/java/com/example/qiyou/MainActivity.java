@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        /*
 
         handler=new Handler(){
             @Override
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
+        */
         reg =(Button) findViewById(R.id.button_register);
         login=(Button) findViewById(R.id.button_load);
         count= (EditText) findViewById(R.id.editText_user);
@@ -101,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                // Intent go_main = new Intent(MainActivity.this, FragmainActivity.class);
-                //   startActivity(go_main);
+                Intent go_main = new Intent(MainActivity.this, FragmainActivity.class);
+                startActivity(go_main);
 
                 //finish();
             }
