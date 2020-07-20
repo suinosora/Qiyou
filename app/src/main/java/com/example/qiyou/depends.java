@@ -42,7 +42,7 @@ public class depends extends Thread{
         msg = msg + "\""+"user_info" + "\""+":" + "{" + "\""+ "name"+ "\""+ ":" + "\""+ name + "\""+ ","+ "\""+"id"+ "\""+":" + "\""+ id + "\""+ ","+ "\""+"passwd"+ "\""+":" + "\""+ passwd + "\""+ "},";
         msg = msg + "\""+"user_request_type"+ "\""+":" + "{" + "\""+ "type_name"+ "\""+":" + "\""+ type_name + "\""+ ","+ "\""+"return_need_or_not"+ "\""+":" + "\""+return_need_or_not
                 + "\""+ "},";
-        msg = msg + "\""+ "user_data"+ "\""+":" + "{" + "\""+"data"+ "\""+":" + "\""+data + "\""+ "}";
+        msg = msg + "\""+ "user_data"+ "\""+":" + "\""+data + "\"";
         msg += "}";
         this.msg=msg;
         return msg;

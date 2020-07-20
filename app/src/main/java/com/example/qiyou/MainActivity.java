@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast ts = Toast.makeText(getBaseContext(),"登录成功",Toast.LENGTH_SHORT);
                     ts.show();
                     Intent go_main = new Intent(MainActivity.this, FragmainActivity.class);
+                    go_main.putExtra("name",name);
                     startActivity(go_main);
                 }else if(value.equals("账户或密码错误")){
                     Toast ts = Toast.makeText(getBaseContext(),"账户或密码错误",Toast.LENGTH_SHORT);
@@ -103,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Intent go_main = new Intent(MainActivity.this, FragmainActivity.class);
+                go_main.putExtra("name",name);
                 startActivity(go_main);
 
                 //finish();
